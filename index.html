@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="theme-color" content="#08298a">
+<title>RumberaStereo.com - La Primera En La Web</title>
+
+<link href="style.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="lunaradio-animado.js"></script>
+<style>
+html,body{font-family:"Open Sans",sans-serif;height:100%;margin:0;display:flex;flex-direction:column;color:#272829;}
+</style>
+</head>
+
+<style>
+        body {   
+          z-index: 1;
+          background: linear-gradient(-45deg, red, blue, purple, red, yellow, grey, black, green);
+          background-size: 300% 300%;
+          background-image: url("fondo-reproductor.jpg"); no-repeat center center fixed; top no-repeat ;
+background-size: cover;
+
+          width: 100%;
+       
+          animation: animate 19s ease infinite;
+        }
+        
+        @keyframes animate {
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
+
+        }
+    </style>
+
+
+
+<body>
+<div style="height:100%">
+<button type="button" class="mobile-nav-toggle"><i class="fas fa-bars"></i></button>
+<header id="header">
+<nav class="nav-menu">
+<ul>
+
+<div align="center"><li><img src="logo-menu-pa-luna.png" alt="RumberaStereo.com" width="200" height="100"></li></div>
+
+<li><a href="https://rumberastereo.com" target="_parent"><img src="app-inicio.png" alt="RumberaStereo.com" width="200" height="40" border="0"></a></li>
+
+<li><a href="https://api.whatsapp.com/send?phone=573012927763" target="_blank"><img src="app-whatsapp.png" alt="WhatApp" width="200" height="40" border="0"></a></li>
+
+<li><a href="https://www.facebook.com/rumberastereo" target="_blank"><img src="app-facebook.png" alt="Facebook" width="200" height="40" border="0"></a></li>
+
+<li><a href="https://www.youtube.com/@RumberaStereo" target="_blank"><img src="app-youtube.png" alt="YouTube" width="200" height="40" border="0"></a></li>
+
+<li><a href="https://play.google.com/store/apps/details?id=rumberastereo.com" target="_blank"><img src="app-play-store.png" alt="Descargar la Aplicacion" width="200" height="40" border="0"></a></li>
+
+</ul>
+</nav>
+</header>
+
+<!-- LunaRadio Plugin -->
+<script src="lunaradio.min.js"></script>
+
+<div id="player"></div>
+<script>
+$("#player").lunaradio({
+userinterface: "big", 
+backgroundcolor: "",
+fontname: "Saira Condensed", 
+googlefont: "Saira+Condensed:wght@100", 
+fontratio: "0.4", 
+fontcolor: "#ffffff",
+hightlightcolor: "#ff0000",
+radioname: "SONANDO:", 
+scroll: "true", 
+scrollradioname: "left",
+scrolltitle: "left",  // cambia a "left" para que el título se mueva y sea visible
+coverimage: "logo-player.jpg",
+onlycoverimage: "false",
+coverstyle: "animated",
+usevisualizer: "real", 
+visualizertype: "2", 
+multicolorvisualizer: "true",
+color1: "#ffec00",
+color2: "#2645d5",
+color3: "#ff0000",
+color4: "FF0000",
+visualizeropacity: "0.6",
+visualizerghost: "0.8",
+itunestoken: "1000lIPN", 
+metadatatechnic: "fallback",
+ownmetadataurl: "",  // si tienes un backend que devuelve metadata, puedes usarlo aquí
+streamurl: "https://sc10.conectarhosting.com/proxy/rumberastereo",
+streamtype: "shoutcast2", //soporta: zeno, icecast2, shoutcast2
+shoutcastpath: "/;?type=http&nocache=107036",
+shoutcastid: "1", 
+metadatainterval: "15000", 
+volume: "80",
+debug: "false",
+uselocalstorage: "true",
+autoplay: "true",
+displayliveicon: "true",
+displayvisualizericon: "true",
+usestreamcorsproxy: "false",
+corsproxy: ""
+});
+</script>
+
+
+
+
+
+
+
+<script>
+$(".mobile-nav-toggle").click(function(){
+$("body").toggleClass("mobile-nav-active");
+$(".mobile-nav-toggle i").toggleClass("fa-bars fa-times");
+});
+</script>
+</body>
+</html>
